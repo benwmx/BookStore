@@ -7,6 +7,7 @@ const AddBook = () => {
       <h1 className="header">Add new book </h1>
       <form>
         <input type="text" className="bookTitle" placeholder="Book Title" />
+        <input type="text" className="bookAuthor" placeholder="Book Author" />
         <select name="categorie" id="categorie">
           {categories.map((category) => (
             <option key={category.id} value={category.name}>{category.name}</option>
