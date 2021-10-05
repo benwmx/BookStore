@@ -1,9 +1,10 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import Book from './Book';
 import AddBook from './AddBook';
 
 const Books = () => {
-  const books = [];
+  const books = useSelector((state) => state.books);
   return (
     <>
       <div className="booksContainer">
