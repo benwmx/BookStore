@@ -3,23 +3,7 @@ import Book from './Book';
 import AddBook from './AddBook';
 
 const Books = () => {
-  const books = [
-    {
-      title: 'Books',
-      author: 'Rachid',
-      category: 'Action',
-    },
-    {
-      title: 'Books',
-      author: 'Rachid',
-      category: 'Action',
-    },
-    {
-      title: 'Books',
-      author: 'Rachid',
-      category: 'Action',
-    },
-  ];
+  const books = [];
   return (
     <>
       <div className="booksContainer">
