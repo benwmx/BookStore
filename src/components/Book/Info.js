@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 const Info = (props) => {
   const { bookInfo } = props;
@@ -18,7 +18,7 @@ const Info = (props) => {
   );
 };
 
-// Info.propTypes = {
-//   bookInfo: PropTypes.shape.isRequired,
-// };
+Info.propTypes = {
+  bookInfo: PropTypes.shape({ root: PropTypes.string.isRequired }).isRequired,
+};
 export default Info;
