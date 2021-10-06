@@ -6,7 +6,7 @@ const Info = (props) => {
   const { bookInfo } = props;
   return (
     <div className="info">
-      <p className="category">{bookInfo.category}</p>
+      <p className="category">Action</p>
       <p className="title">{bookInfo.title}</p>
       <p className="author">{bookInfo.author}</p>
       <div className="creButtons">
@@ -19,6 +19,9 @@ const Info = (props) => {
 };
 
 Info.propTypes = {
-  bookInfo: PropTypes.shape({ root: PropTypes.string.isRequired }).isRequired,
+  bookInfo: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    author: PropTypes.string.isRequired,
+  }).isRequired,
 };
 export default Info;
