@@ -16,6 +16,11 @@ const addListOfBooksFromApi = (payload) => ({
   payload,
 });
 
+const removeBook = (payload) => ({
+  type: REMOVE_BOOK,
+  payload,
+});
+
 // redux thunks middlewares for adding/getting/removing books from the API.
 const addBookToApi = (payload) => (dispatch) => {
   const book = { item_id: payload.id, title: `${payload.title} #author# ${payload.author}`, category: payload.category };
@@ -30,16 +35,23 @@ const addBookToApi = (payload) => (dispatch) => {
   });
 };
 
+const removeBookFromApi = (payload) => (dispatch) => {
+  fetch(`${url}${payload}`, {
+    method: 'DELETE',
+    body: JSON.stringify({ item_id: payload }),
+  })
+    .then((response) => response.text())
+    .then((data) => {
+      if (data === 'The book was deleted successfully!') dispatch(removeBook(payload));
+    });
+};
+
 const getListOfBooks = () => (dispatch) => {
   fetch(url)
     .then((response) => response.json())
     .then((data) => dispatch(addListOfBooksFromApi(data)));
 };
 //
-const removeBook = (payload) => ({
-  type: REMOVE_BOOK,
-  payload,
-});
 
 const separateTitleFromAuthor = (titleAuthor) => ({
   title: titleAuthor.split('#author#')[0],
@@ -77,4 +89,5 @@ export {
   removeBook,
   addBookToApi,
   getListOfBooks,
+  removeBookFromApi,
 };
