@@ -1,16 +1,16 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { addBookToApi } from '../redux/books/books';
 
 const AddBook = () => {
-  const categories = [{ id: '1', name: 'Fantasy' }, { id: '2', name: 'Science Fiction' }];
+  const categories = useSelector((state) => state.categories);
   const [book, setBook] = useState({
-    id: '', title: '', author: '', category: 'Fantasy',
+    id: '', title: '', author: '', category: 'Fiction',
   });
 
-  const [selectedCategory, setCategory] = useState('Fantasy');
+  const [selectedCategory, setCategory] = useState('Fiction');
 
   const dispatch = useDispatch();
 
@@ -27,7 +27,7 @@ const AddBook = () => {
     if (book.title.trim() !== '' && book.author.trim() !== '') {
       const newBook = { ...book, id: uuidv4() };
       dispatch(addBookToApi(newBook));
-      setBook({ title: '', author: '', category: 'Fantasy' });
+      setBook({ title: '', author: '', category: 'Fiction' });
     }
   };
   return (
