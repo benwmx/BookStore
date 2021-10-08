@@ -3,8 +3,8 @@ import ProgressCircle from './ProgressCircle';
 
 const Progress = () => (
   <div className="progress">
+    <ProgressCircle className="progressCircle" />
     <div className="progressPercent">
-      <ProgressCircle className="progressCircle" />
       <p className="percentage">10%</p>
       <p className="completed">Completed</p>
     </div>

@@ -11,6 +11,7 @@ $dark-grey: #868b8e;
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px;
+  background-color: white;
 
   .info {
     display: flex;
@@ -20,18 +21,72 @@ $dark-grey: #868b8e;
 
     .category {
       color: $dark-grey;
+      margin: 0 0 4px 0;
+    }
+
+    .title {
+      margin: 0;
     }
 
     .author {
       color: $theme-color;
+      margin: 0 0 10px 0;
     }
 
-    button {
-      background-color: transparent;
-      border: none;
-      color: $theme-color;
-      cursor: pointer;
+    .creButtons {
+      flex: 1;
+      display: flex;
+
+      button {
+        background-color: transparent;
+        align-self: flex-end;
+        border: none;
+        color: $theme-color;
+        cursor: pointer;
+        padding: 0 10px 0 0;
+      }
+
+      button:hover {
+        transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        -o-transform: scale(1.1);
+      }
+
+      button:active {
+        color: red;
+      }
     }
+  }
+
+  .progress {
+    display: flex;
+    flex-flow: row;
+
+    .progressPercent {
+      margin-left: 10px;
+      padding-top: 10px;
+
+      p {
+        margin: 0;
+      }
+
+      .percentage {
+        font-size: 2rem;
+      }
+
+      .completed {
+        color: $dark-grey;
+      }
+    }
+  }
+
+  .verticalSeparator {
+    background-color: $accent-color;
+    margin: 0 50px;
+    width: 2px;
+    height: 100px;
   }
 
   .chapterContainer {
