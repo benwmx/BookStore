@@ -1,8 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@400;700&display=swap');
+$theme-color : #0290ff;
+$accent-color : #929294;
+
 .navbar {
   width: 100%;
   display: flex;
-}
+  justify-content: space-between;
 
-.brandLinksContainer {
-  display: flex;
+  .brandLinksContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .brand {
+      color: $theme-color;
+      font-size: 2rem;
+      font-weight: bold;
+      font-family: 'MuseoModerno', cursive;
+      margin-left: 40px;
+    }
+
+    a {
+      text-decoration: none;
+      color: $accent-color;
+      margin: 0 0 0 100px;
+      font-style: italic;
+    }
+
+    .activeLink {
+      font-style: normal;
+      font-weight: bold;
+      color: black;
+    }
+  }
+
+  .user {
+    display: flex;
+    flex-flow: row-reverse;
+    align-items: center;
+
+    svg {
+      color: $theme-color;
+      font-size: 1.5rem;
+      border: 1px solid $accent-color;
+      padding: 10px;
+      margin-right: 40px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%;
+    }
+  }
 }
