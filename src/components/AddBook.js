@@ -32,7 +32,7 @@ const AddBook = () => {
   };
   return (
     <>
-      <h1 className="header">Add new book </h1>
+      <h2 className="header">Add new book </h2>
       <form onSubmit={submitBookToStore}>
         <input type="text" className="bookTitle" placeholder="Book Title" name="title" value={book.title} onChange={onChange} required />
         <input type="text" className="bookAuthor" placeholder="Book Author" name="author" value={book.author} onChange={onChange} required />

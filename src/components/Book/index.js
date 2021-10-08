@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Info from './Info';
 import Progress from './Progress';
 import Chapter from './Chapter';
+import './index.scss';
 
 const Book = (props) => {
   const { bookInfo } = props;
