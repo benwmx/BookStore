@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Categories = () => (
-  <p className="categoryMsg">Under construction</p>
+  <h1 className="categoryMsg" style={{ textAlign: 'center' }}>Under construction 👷‍♂️</h1>
 );
 
 export default Categories;

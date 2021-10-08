@@ -3,6 +3,7 @@ $light-theme-color : #4dabf3;
 $accent-color : #cccaca;
 $dark-grey: #868b8e;
 $edit-color: #85e260;
+$formInputs-margin: 30px;
 
 #root {
   height: 100vh;
@@ -39,13 +40,14 @@ $edit-color: #85e260;
 
   form {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
 
     input {
       background-color: white;
       border: 1px solid $accent-color;
       color: $dark-grey;
       width: 300px;
+      margin-right: $formInputs-margin;
       height: 2rem;
       -webkit-border-radius: 4px;
       -moz-border-radius: 4px;
@@ -56,6 +58,7 @@ $edit-color: #85e260;
 
     select {
       width: 150px;
+      margin-right: $formInputs-margin;
       background-color: white;
       border: 1px solid $accent-color;
       border-radius: 4px;
@@ -66,6 +69,7 @@ $edit-color: #85e260;
       background-color: $theme-color;
       color: white;
       width: 150px;
+      margin-right: $formInputs-margin;
       border: none;
       border-radius: 4px;
     }
@@ -90,5 +94,23 @@ $edit-color: #85e260;
     a {
       margin-left: 10px;
     }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #root {
+    height: auto;
+    width: 100vw;
+    overflow: hidden;
+  }
+
+  .footer {
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  form > * {
+    margin: 0 5px;
   }
 }

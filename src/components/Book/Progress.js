@@ -5,7 +5,7 @@ const Progress = () => (
   <div className="progress">
     <ProgressCircle className="progressCircle" />
     <div className="progressPercent">
-      <p className="percentage">10%</p>
+      <p className="percentage">0%</p>
       <p className="completed">Completed</p>
     </div>
   </div>

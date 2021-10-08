@@ -141,3 +141,53 @@ $edit-color: #85e260;
     }
   }
 }
+
+@media screen and (max-width: 1200px) {
+  .bookInfoContainer {
+    .info {
+      margin-right: 10px;
+    }
+
+    .verticalSeparator {
+      margin: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .bookInfoContainer {
+    margin: 0 20px 20px 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .bookInfoContainer {
+    flex-flow: column;
+    margin: 0 80px 20px 80px;
+
+    .info,
+    .progress,
+    .chapterContainer {
+      align-self: center;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .chapterContainer {
+      margin: 20px auto;
+      justify-content: space-between;
+    }
+
+    .verticalSeparator {
+      width: 60%;
+      margin: 40px auto;
+      height: 2px;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .bookInfoContainer {
+    margin: 0 20px 20px 20px;
+  }
+}
