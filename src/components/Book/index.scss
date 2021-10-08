@@ -1,0 +1,40 @@
+$theme-color : #50a0dd;
+$accent-color : #929294;
+$dark-grey: #868B8E;
+
+.bookInfoContanier {
+  display: flex;
+  padding: 20px;
+  border: 1px solid;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+
+  .info {
+    display: flex;
+    flex-flow: column;
+    flex: 1;
+    margin-right: 100px;
+
+    .category {
+      color: $dark-grey;
+    }
+
+    .author {
+      color: $theme-color;
+    }
+
+    button {
+      background-color: transparent;
+      border: none;
+      color: $theme-color;
+      cursor: pointer;
+    }
+  }
+
+  .chapterContainer {
+
+  }
+}
