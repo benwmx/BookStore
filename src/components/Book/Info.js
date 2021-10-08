@@ -14,11 +14,13 @@ const Info = (props) => {
   return (
     <div className="info">
       <p className="category">{bookInfo.category}</p>
-      <p className="title">{bookInfo.title}</p>
+      <h2 className="title">{bookInfo.title}</h2>
       <p className="author">{bookInfo.author}</p>
       <div className="creButtons">
         <button type="button" className="comments">Comments</button>
+        <div className="btnSeparator"> </div>
         <button type="button" className="remove" onClick={removeBookFromStore}>Remove</button>
+        <div className="btnSeparator"> </div>
         <button type="button" className="edit">Edit</button>
       </div>
     </div>

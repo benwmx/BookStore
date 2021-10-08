@@ -8,6 +8,10 @@
 # BookStore
 > The BookStore is a web-based SPA application that allows you to create/manage list of your favorite books.the data is saved in an external API hosted by [Microverse](https://www.microverse.org/)
 
+## Live demo
+Hosted by Netlify
+[Link](https://book-store-101.netlify.app/#/)
+
 Note : 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template. to learn more about `React` visit this links :
 * [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).

@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@400;700&family=Ubuntu:wght@400;700&display=swap');
+
 body {
   margin: 0;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
   font-family:
     -apple-system,
     BlinkMacSystemFont,
@@ -14,6 +19,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('../src/img/circles-light.png');
 }
 
 code {
