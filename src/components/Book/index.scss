@@ -2,11 +2,13 @@ $theme-color : #0290ff;
 $light-theme-color : #4dabf3;
 $accent-color : #929294;
 $dark-grey: #868b8e;
+$edit-color: #85e260;
 
-.bookInfoContanier {
+.bookInfoContainer {
   display: flex;
   padding: 20px;
-  border: 1px solid;
+  margin: 0 100px 20px 100px;
+  border: 1px solid #d6dadd;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
@@ -27,16 +29,24 @@ $dark-grey: #868b8e;
 
     .title {
       margin: 0;
+      font-size: 1.7rem;
     }
 
     .author {
       color: $light-theme-color;
       margin: 0 0 10px 0;
+      font-size: 1.05rem;
     }
 
     .creButtons {
       flex: 1;
       display: flex;
+
+      .btnSeparator {
+        width: 1px;
+        background-color: $accent-color;
+        margin: 0 15px;
+      }
 
       button {
         background-color: transparent;
@@ -44,7 +54,8 @@ $dark-grey: #868b8e;
         border: none;
         color: $light-theme-color;
         cursor: pointer;
-        padding: 0 10px 0 0;
+        font-size: 1.1rem;
+        padding: 0;
       }
 
       button:hover {
@@ -55,8 +66,13 @@ $dark-grey: #868b8e;
         transform: scale(1.1);
       }
 
-      button:active {
+      .remove:active {
         color: red;
+      }
+
+      .comments:active,
+      .edit:active {
+        color: #074472;
       }
     }
   }
@@ -64,10 +80,10 @@ $dark-grey: #868b8e;
   .progress {
     display: flex;
     flex-flow: row;
+    align-items: center;
 
     .progressPercent {
       margin-left: 10px;
-      padding-top: 10px;
 
       p {
         margin: 0;
@@ -85,13 +101,13 @@ $dark-grey: #868b8e;
 
   .verticalSeparator {
     background-color: $accent-color;
-    margin: 0 50px;
+    margin: 0 50px 0 150px;
     width: 2px;
     height: 100px;
   }
 
   .chapterContainer {
-    margin-right: 40px;
+    margin: 7px 60px 0 0;
 
     .currentChapter {
       margin: 0;
@@ -106,12 +122,22 @@ $dark-grey: #868b8e;
     .btnProgress {
       border: none;
       background-color: $theme-color;
+      color: white;
       padding: 10px;
       -webkit-border-radius: 3px;
       -moz-border-radius: 3px;
       -ms-border-radius: 3px;
       -o-border-radius: 3px;
       border-radius: 3px;
+    }
+
+    .btnProgress:hover {
+      background-color: $light-theme-color;
+    }
+
+    .btnProgress:active {
+      background-color: $edit-color;
+      color: $dark-grey;
     }
   }
 }

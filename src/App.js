@@ -1,8 +1,10 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import Books from './components/Books';
 import Categories from './components/Categories';
+import Footer from './components/Footer';
 import './App.scss';
 
 function App() {
@@ -17,6 +19,7 @@ function App() {
           <Categories />
         </Route>
       </Switch>
+      <Footer />
     </Router>
   );
 }

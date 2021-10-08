@@ -18,7 +18,9 @@ const Info = (props) => {
       <p className="author">{bookInfo.author}</p>
       <div className="creButtons">
         <button type="button" className="comments">Comments</button>
+        <div className="btnSeparator"> </div>
         <button type="button" className="remove" onClick={removeBookFromStore}>Remove</button>
+        <div className="btnSeparator"> </div>
         <button type="button" className="edit">Edit</button>
       </div>
     </div>

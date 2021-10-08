@@ -8,7 +8,7 @@ import './index.scss';
 const Book = (props) => {
   const { bookInfo } = props;
   return (
-    <div className="bookInfoContanier">
+    <div className="bookInfoContainer">
       <Info bookInfo={bookInfo} />
       <Progress />
       <div className="verticalSeparator"> </div>

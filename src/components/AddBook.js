@@ -31,7 +31,7 @@ const AddBook = () => {
     }
   };
   return (
-    <>
+    <div className="addBookContainer">
       <h2 className="header">Add new book </h2>
       <form onSubmit={submitBookToStore}>
         <input type="text" className="bookTitle" placeholder="Book Title" name="title" value={book.title} onChange={onChange} required />
@@ -43,7 +43,7 @@ const AddBook = () => {
         </select>
         <button type="submit" className="submitBtn">Add Book</button>
       </form>
-    </>
+    </div>
   );
 };
 
